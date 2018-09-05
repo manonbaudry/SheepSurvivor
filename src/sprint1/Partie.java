@@ -7,10 +7,39 @@ package sprint1;
 import java.util.Scanner;
 
 public class Partie {
-	
 	private Berger b; 
 	private TroupeauMouton troupeau;
+	private int compteur;
+	/**
+	 * @return the compteur
+	 */
+	public int getCompteur() {
+		return compteur;
+	}
 
+	/**
+	 * @param compteur the compteur to set
+	 */
+	public void setCompteur(int compteur) {
+		this.compteur = compteur;
+	}
+
+	/**
+	 * @return the finPartie
+	 */
+	public boolean isFinPartie() {
+		return finPartie;
+	}
+
+	/**
+	 * @param finPartie the finPartie to set
+	 */
+	public void setFinPartie(boolean finPartie) {
+		this.finPartie = finPartie;
+	}
+
+
+	private boolean finPartie;
 	
 	/**
 	 * @param b
@@ -19,20 +48,23 @@ public class Partie {
 	public Partie(Berger b, TroupeauMouton troupeau) {
 		this.b = b;
 		this.troupeau = troupeau;
+		this.compteur = 0;
+		this.finPartie = false;
 	}
 
 	public static String saisieNom() {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Saisir votre nom:");
+		System.out.print("Saisir votre nom:");
 		String str = sc.nextLine();
 		sc.close();
 		return str;
 	}
 	
 	public void afichageDonnees() {
-		
-		System.out.println(b.getNom()+ " voilà ton troupeau\n ta jauge de fatigue est à " + b.getJaugeFatigue());
+		System.out.println(b.getNom());
+		System.out.println("Energie:" + b.showJaugeFatigue());
+		System.out.println("T R O U P E A U :\n S A N T É :" + b.getJaugeFatigue());
 		System.out.println(troupeau.toString());
 	}
 	
@@ -57,14 +89,6 @@ public class Partie {
 		this.troupeau = troupeau;
 	}
 
-	public static void main (String [] args) {
-		Partie p = new Partie(new Berger(saisieNom()), new TroupeauMouton(30));
-		System.out.println(Texts.moutonIntro());
-		System.out.println(Texts.getIntro());
-		System.out.println(Texts.getRegles());
-		System.out.println(p.getB().getNom());
-		System.out.println(p.getTroupeau().toString());
-		
-	}
+	
 
 }
