@@ -1,7 +1,6 @@
 package sprint2;
 
 import java.util.Scanner;
-
 import sprint1.Berger;
 import sprint1.Texts;
 import sprint1.TroupeauMouton;

@@ -7,11 +7,13 @@ package sprint1;
 public class Berger {
 	private String nom;
 	private int jaugeFatigue;
-	//jauge à ajouter 
+	private final int MAXFATIGUE;
 	
 	public Berger(String nom) {
 		this.nom = nom;
-		jaugeFatigue = 10;
+		MAXFATIGUE = 10;
+		jaugeFatigue = MAXFATIGUE;
+		
 	}
 
 	/**
@@ -34,6 +36,10 @@ public class Berger {
 	public int getJaugeFatigue() {
 		return jaugeFatigue;
 	}
+	
+	public int getMAXFATIGUE() {
+		return MAXFATIGUE;
+	}
 
 	/**
 	 * @param jaugeFatigue the jaugeFatigue to set
@@ -43,7 +49,7 @@ public class Berger {
 	}
 	
 	public void resetJaugeFatigue() {
-		setJaugeFatigue(10);
+		setJaugeFatigue(MAXFATIGUE);
 	}
 	
 	public String showJaugeFatigue() {
