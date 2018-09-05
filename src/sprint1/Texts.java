@@ -42,8 +42,28 @@ public class Texts {
 		return 	  "1- Vous devez reussir a avoir le plus grand nombre de mouton\n"
 				+ "2- Le nombre de jours est de 20\n"
 				+ "3- Si vous n'avez plus de mouton c'est la fin de la partie\n"
-				+ "4- Si votre jauge de fatigue est au maximum vous ne pourrez plus faire d'action\n";
+				+ "4- Si votre jauge de santé est au minimum, vous ne pourrez plus faire d'action\n";
+	}
+	
+	public static String getAleaLoups() {
+		return	"Vous êtes attaqué par les loups ! Vite, protégez vos moutons !\n"
+				+ "";
+	}
+	public static String getAleaMaladie() {
+		return	"Un ou plusieurs moutons semblent malades, ils pourraient contaminer\n"
+				+ "le reste du troupeau !\n";
 	}
 
+	public static String getAleaTempete() {
+		return	"Un orage se profile. Rentrez votre troupeau à la bergerie, mais prudence :\n"
+				+ "ils n'y trouveront pas d'herbe à brouter !\n";
+	}
 	
+	public static String getAleaNaissance(int nombrePetits) {
+		return "Bonne nouvelle à la ferme : votre troupeau compte " + nombrePetits + "nouveaux nés !\n";
+	}
+
+	public static String getAleaTombola() {
+		return "Tombola au village : tentez de gagner un mouton !\n";
+	}
 }
