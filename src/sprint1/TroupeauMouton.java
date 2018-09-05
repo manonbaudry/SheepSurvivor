@@ -8,7 +8,7 @@ public class TroupeauMouton {
 
 	public TroupeauMouton(int nbMouton) {
 		nbMalade = 0;
-		jaugeFaim = nbMouton;
+		jaugeFaim = 10;
 		this.nbMouton = nbMouton;
 	}
 
@@ -35,6 +35,18 @@ public class TroupeauMouton {
 	public void setJaugeFaim(int jaugeFaim) {
 		this.jaugeFaim = jaugeFaim;
 	}
+	
+	public String showJaugeFaim() {
+		String res = "";
+		for (int i = 0; i < 10; i++) {
+			if (jaugeFaim>i) {
+				res+="#";
+			}else {
+				res+=".";
+			}
+		}
+		return res;
+	}
 
 	@Override
 	public String toString() {
@@ -56,5 +68,5 @@ public class TroupeauMouton {
 		return res;
 
 	}
-
+	
 }

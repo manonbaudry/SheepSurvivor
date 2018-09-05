@@ -46,8 +46,7 @@ public class Texts {
 	}
 	
 	public static String getAleaLoups() {
-		return	"Vous êtes attaqué par les loups ! Vite, protégez vos moutons !\n"
-				+ ""; 
+		return	"Vous êtes attaqué par les loups ! Vite, protégez vos moutons !\n"; 
 	}
 	public static String getAleaMaladie() {
 		return	"Un ou plusieurs moutons semblent malades, ils pourraient contaminer\n"
