@@ -2,6 +2,10 @@ package sprint1;
 
 public class Texts {
 
+	/**
+	 * Affiche deux moutons pour l'intro
+	 * @return
+	 */
 	public static String moutonIntro() {
 		return "        __  _\n" + 
 				"       .-.'  `; `-._  __  _\n" + 

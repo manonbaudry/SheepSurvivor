@@ -4,9 +4,11 @@ public class TroupeauMouton {
 
 	private int nbMalade;
 	private int nbMouton;
+	private int jaugeFaim;
 
 	public TroupeauMouton(int nbMouton) {
 		nbMalade = 0;
+		jaugeFaim = nbMouton;
 		this.nbMouton = nbMouton;
 	}
 
@@ -24,6 +26,14 @@ public class TroupeauMouton {
 
 	public void setNbMouton(int nbMouton) {
 		this.nbMouton = nbMouton;
+	}
+	
+	public int getJaugeFaim() {
+		return jaugeFaim;
+	}
+	
+	public void setJaugeFaim(int jaugeFaim) {
+		this.jaugeFaim = jaugeFaim;
 	}
 
 	@Override
