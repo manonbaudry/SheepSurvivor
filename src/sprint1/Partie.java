@@ -7,20 +7,63 @@ package sprint1;
 import java.util.Scanner;
 
 public class Partie {
+	
+	private Berger b; 
+	private TroupeauMouton troupeau;
+
+	
+	/**
+	 * @param b
+	 * @param troupeau
+	 */
+	public Partie(Berger b, TroupeauMouton troupeau) {
+		this.b = b;
+		this.troupeau = troupeau;
+	}
+
 	public static String saisieNom() {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Nom:");
+		System.out.println("Saisir votre nom:");
 		String str = sc.nextLine();
 		sc.close();
 		return str;
 	}
 	
+	public void afichageDonnees() {
+		
+		System.out.println(b.getNom()+ " voilà ton troupeau\n ta jauge de fatigue est à " + b.getJaugeFatigue());
+		System.out.println(troupeau.toString());
+	}
 	
+	/**
+	 * @return the b
+	 */
+	public Berger getB() {
+		return b;
+	}
+
+	/**
+	 * @return the troupeau
+	 */
+	public TroupeauMouton getTroupeau() {
+		return troupeau;
+	}
+
+	/**
+	 * @param troupeau the troupeau to set
+	 */
+	public void setTroupeau(TroupeauMouton troupeau) {
+		this.troupeau = troupeau;
+	}
+
 	public static void main (String [] args) {
-		Berger b = new Berger(saisieNom());
-		TroupeauMouton troupeau = new TroupeauMouton(30);
-		b.toString();
+		Partie p = new Partie(new Berger(saisieNom()), new TroupeauMouton(30));
+		System.out.println(Texts.moutonIntro());
+		System.out.println(Texts.getIntro());
+		System.out.println(Texts.getRegles());
+		System.out.println(p.getB().getNom());
+		System.out.println(p.getTroupeau().toString());
 		
 	}
 
