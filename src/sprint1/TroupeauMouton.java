@@ -29,23 +29,26 @@ public class TroupeauMouton {
 	@Override
 	public String toString() {
 		String res = "";
-		int nbm = this.nbMouton;
-		while (nbm > 0) {
-			for (int i = 0; i < 10 && nbm > 0; i++) {
-				res += "  ,---@> ";
+		int nbm1 = this.nbMouton;
+		int nbm2 = this.nbMouton;
+		while (nbm1 > 0) {
+			for (int i = 0; i < 15 && nbm1>0 ; i++) {
+				res += "  ,---@>";
+				nbm1--;
 			}
 			res += "\n";
-			nbm = this.nbMouton;
-			for (int i = 0; i < 10  && nbm > 0; i++) {
-				res += "   W-W'  ";
+			for (int i = 0; i < 15  && nbm2 > 0; i++) {
+				res += "   W-W' ";
+				nbm2--;
 			}
+			res += "\n\n";
 		}
 		return res;
 
 	}
 
 	public static void main(String[] args) {
-		TroupeauMouton tm = new TroupeauMouton(11);
+		TroupeauMouton tm = new TroupeauMouton(100);
 		System.out.println(tm.toString());
 	}
 
