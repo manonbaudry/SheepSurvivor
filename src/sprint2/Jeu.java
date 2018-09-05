@@ -23,10 +23,21 @@ public class Jeu {
 		System.out.println(Texts.moutonIntro());
 		System.out.println(Texts.getIntro());
 		System.out.println(Texts.getRegles());
-		//fin intro
+		
+		
 		
 		Partie p = new Partie(new Berger(Partie.saisieNom()), new TroupeauMouton(30));
-		p.afichageDonnees();
+		//while(! p.isFinPartie()) {
+
+			p.afichageDonnees();
+			//ici tirage aléa
+			//choix du joueur sur action du berger
+			p.incrementeCompteur();
+			p.finPartie();
+		//}
+
+		
+		
 
 	}
 
