@@ -47,9 +47,4 @@ public class TroupeauMouton {
 
 	}
 
-	public static void main(String[] args) {
-		TroupeauMouton tm = new TroupeauMouton(100);
-		System.out.println(tm.toString());
-	}
-
 }
