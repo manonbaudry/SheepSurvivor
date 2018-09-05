@@ -13,8 +13,8 @@ public abstract class ConsequenceAlea {
 			return Alea.TEMPETE;
 		}else if (tirage < 0.6) {
 			return Alea.NAISSANCE;
-		} else if (tirage < 0.7) {
-			return Alea.TOMBOLA;
+		} else if (tirage < 0.7) { 
+			return Alea.TOMBOLA; 
 		}else if (tirage < 0.8) {
 			return Alea.MALADIE;
 		}

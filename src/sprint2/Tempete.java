@@ -6,7 +6,7 @@ import sprint1.TroupeauMouton;
 public class Tempete extends ConsequenceAlea {
 
 	@Override
-	public void effectuerAlea(TroupeauMouton moutons) {
+	public void effectuerAlea(TroupeauMouton moutons) { 
 		System.out.println(Texts.getAleaTempete());
 		int nbMoutonMort = moutons.getNbMouton() / 33;
 		System.out.println("Mince, vous n'avez pas réussi à sauver tous les moutons !\n"

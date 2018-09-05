@@ -12,7 +12,7 @@ public class Loups extends ConsequenceAlea {
 		System.out.println("Les loups ont réussi à dévorer " + nbMoutonMort + " délicieux moutons...");
 		moutons.setNbMouton(moutons.getNbMouton()- nbMoutonMort);
 		if (moutons.getNbMalade() > moutons.getNbMouton()) {
-			moutons.setNbMalade(moutons.getNbMouton());
+			moutons.setNbMalade(moutons.getNbMouton()); 
 		}
 	}
 	
