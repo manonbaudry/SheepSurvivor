@@ -10,6 +10,7 @@ public class Partie {
 	private Berger b; 
 	private TroupeauMouton troupeau;
 	private int compteur;
+	private boolean finPartie;
 	/**
 	 * @return the compteur
 	 */
@@ -20,8 +21,8 @@ public class Partie {
 	/**
 	 * @param compteur the compteur to set
 	 */
-	public void setCompteur(int compteur) {
-		this.compteur = compteur;
+	public void incrementeCompteur() {
+		compteur++;
 	}
 
 	/**
@@ -31,15 +32,7 @@ public class Partie {
 		return finPartie;
 	}
 
-	/**
-	 * @param finPartie the finPartie to set
-	 */
-	public void setFinPartie(boolean finPartie) {
-		this.finPartie = finPartie;
-	}
-
-
-	private boolean finPartie;
+	
 	
 	/**
 	 * @param b
@@ -62,10 +55,11 @@ public class Partie {
 	}
 	
 	public void afichageDonnees() {
-		System.out.println(b.getNom());
-		System.out.println("Energie:" + b.showJaugeFatigue());
-		System.out.println("T R O U P E A U :\n S A N T É :" + b.getJaugeFatigue());
-		System.out.println(troupeau.toString());
+		System.out.println(b.getNom() + 
+				"\nEnergie:" + b.showJaugeFatigue()+
+				"\nTour n°" + compteur +
+				"\nT R O U P E A U :\n S A N T É :" + b.getJaugeFatigue() +
+				"\n" +troupeau.toString());
 	}
 	
 	/**
@@ -88,7 +82,11 @@ public class Partie {
 	public void setTroupeau(TroupeauMouton troupeau) {
 		this.troupeau = troupeau;
 	}
-
 	
+	public void finPartie() {
+		if(compteur > 20) {
+			finPartie = true;
+		}
+	}
 
 }
