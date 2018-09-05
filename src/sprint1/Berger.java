@@ -41,6 +41,10 @@ public class Berger {
 	public void setJaugeFatigue(int jaugeFatigue) {
 		this.jaugeFatigue = jaugeFatigue;
 	}
+	
+	public void resetJaugeFatigue() {
+		setJaugeFatigue(10);
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
