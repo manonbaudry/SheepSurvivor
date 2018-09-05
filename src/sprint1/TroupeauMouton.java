@@ -1,21 +1,29 @@
 package sprint1;
 
-public class Mouton {
+public class TroupeauMouton {
 
-	private boolean estMalade;
+	private int nbMalade;
+	private int nbMouton;
 	
-	public Mouton() {
-		estMalade = false;
+	public TroupeauMouton(int nbMouton) {
+		nbMalade = 0;
+		this.nbMouton = nbMouton;
 	}
 	
-	
-	
-	public void setMalade(boolean estMalade) {
-		this.estMalade = estMalade;
+	public int getNbMalade() {
+		return nbMalade;
 	}
 	
-	public boolean isMalade() {
-		return estMalade;
+	public int getNbMouton() {
+		return nbMouton;
+	}
+	
+	public void setNbMalade(int nbMalade) {
+		this.nbMalade = nbMalade;
+	}
+	
+	public void setNbMouton(int nbMouton) {
+		this.nbMouton = nbMouton;
 	}
 	
 	@Override
