@@ -101,6 +101,7 @@ public class Tombola extends ConsequenceAlea{
 		while(! res.matches("[0-9]+.?[0-9]*")) {
 			res = sc.nextLine();
 		}
+		sc.close();
 		double J1 = Math.random()*50;
 		double J2 = Math.random()*40;
 		double J3 = Math.random()*30;

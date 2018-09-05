@@ -5,11 +5,27 @@ public class TroupeauMouton {
 	private int nbMalade;
 	private int nbMouton;
 	private int jaugeFaim;
+	private boolean estDansGrange;
+
+	/**
+	 * @return the estDansGrange
+	 */
+	public boolean isEstDansGrange() {
+		return estDansGrange;
+	}
+
+	/**
+	 * @param estDansGrange the estDansGrange to set
+	 */
+	public void setEstDansGrange(boolean estDansGrange) {
+		this.estDansGrange = estDansGrange;
+	}
 
 	public TroupeauMouton(int nbMouton) {
 		nbMalade = 0;
 		jaugeFaim = 10;
 		this.nbMouton = nbMouton;
+		estDansGrange = false;
 	}
 
 	public int getNbMalade() {

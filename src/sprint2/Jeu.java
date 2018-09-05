@@ -4,6 +4,7 @@
  */
 package sprint2;
 
+import sprint1.Alea;
 import sprint1.Berger;
 import sprint1.Partie;
 import sprint1.Texts;
@@ -27,14 +28,13 @@ public class Jeu {
 		
 		
 		Partie p = new Partie(new Berger(Partie.saisieNom()), new TroupeauMouton(30));
-		//while(! p.isFinPartie()) {
-
+		while(! p.isFinPartie()) {
 			p.afichageDonnees();
-			//ici tirage aléa
-			//choix du joueur sur action du berger
+			MonAlea alea = new MonAlea();
+			alea.tirage(p.getTroupeau(), p.getB());
 			p.incrementeCompteur();
 			p.finPartie();
-		//}
+		}
 
 		
 		
