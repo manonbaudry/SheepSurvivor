@@ -29,5 +29,6 @@ public class Prairie {
 	public String toString() {
 		return ("Il y a actuellement "+nbMoutonsPrairie+" dans la prairie !");
 	}
+
 	
 }
