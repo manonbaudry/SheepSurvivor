@@ -32,7 +32,7 @@ public class Partie {
 	
 	public void afichageDonnees() {
 		
-		System.out.println(b.getNom()+ " voilà ton troupeau\n ta jauge de fatigue est à " + b.getJaugeFatigue());
+		System.out.println(b.getNom()+ "T R O U P E A U :\n S A N T É :" + b.getJaugeFatigue());
 		System.out.println(troupeau.toString());
 	}
 	

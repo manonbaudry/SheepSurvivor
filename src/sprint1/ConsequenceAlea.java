@@ -17,4 +17,7 @@ public class ConsequenceAlea {
 		}
 		return Alea.RIEN;
 	}
+	
+	
+	
 }
