@@ -19,13 +19,13 @@ public class Texts {
 	}
 	
 	public static String getIntro() {
-		return "\t   Bienvenue dans l'univers d'un berger\n"
+		return "\t   Bienvenue dans la peau d'un berger\n"
 				  + "\n"
-				  + "     Vous allez decouvrir que cette dure vie faite de labeur\n"
 				  + "Dans votre ferme des choix cruciaux seront necessaire pour la \n"
-				  + "survie de votre troupeau de mouton\n"
+				  + "survie de votre troupeau de moutons\n"
 				  +"\n"
-				  + "\tArriverez-vous à en avoir le plus possible ?";
+				  + "\tArriverez-vous à en garder le plus possible avant la vente\n"
+				  + "aux enchères ?";
 	}
 	
 	public static String getRegles() {
