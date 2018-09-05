@@ -1,6 +1,9 @@
-package sprint1;
+package sprint2;
 
-public class ConsequenceAlea {
+import sprint1.Alea;
+import sprint1.TroupeauMouton;
+
+public abstract class ConsequenceAlea {
 	
 	public Alea tirage() {
 		double tirage = Math.random();
@@ -18,6 +21,7 @@ public class ConsequenceAlea {
 		return Alea.RIEN;
 	}
 	
+	public abstract void effectuerAlea(TroupeauMouton moutons);
 	
 	
 }
