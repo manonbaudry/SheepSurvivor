@@ -59,7 +59,7 @@ public class Texts {
 	}
 	
 	public static String getAleaNaissance(int nombrePetits) {
-		return "Bonne nouvelle à la ferme : votre troupeau compte " + nombrePetits + "nouveaux nés !\n";
+		return "Bonne nouvelle à la ferme : votre troupeau compte " + nombrePetits + " nouveaux nés !\n";
 	}
 
 	public static String getAleaTombola() {
