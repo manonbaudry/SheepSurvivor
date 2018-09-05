@@ -19,7 +19,7 @@ public class Loups extends ConsequenceAlea {
 			res = sc.nextLine();
 		}
 		sc.close();
-		if (res.equals("2")) {
+		if (res.equals("2") || b.getJaugeFatigue() < 3) {
 			System.out.println("Voulez-vous pourchassez les loups pour esperer sauvez des moutons ?\n" + "1- Oui\n" + "2- Non\n");
 			Scanner sc2 = new Scanner(System.in);
 			String res2 = sc.nextLine();
@@ -27,7 +27,7 @@ public class Loups extends ConsequenceAlea {
 				res2 = sc2.nextLine();
 			}
 			sc2.close();
-			if (res2.equals("2")) {
+			if (res2.equals("2") || b.getJaugeFatigue() < 4) {
 				int nbMoutonMort = moutons.getNbMouton() / 20;
 				System.out.println("Les loups ont réussi à dévorer " + nbMoutonMort + " délicieu(x) mouton(s)...");
 				moutons.setNbMouton(moutons.getNbMouton() - nbMoutonMort);
