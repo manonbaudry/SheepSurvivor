@@ -88,7 +88,7 @@ public class Tombola extends ConsequenceAlea{
 		}else if (r < 0.75) {
 			System.out.println(mouton3());
 			poids = 25*r;
-			mouton = mouton3();
+			mouton = mouton3(); 
 		}else {
 			System.out.println(mouton4());
 			poids = 20 * r;
