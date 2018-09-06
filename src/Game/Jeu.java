@@ -96,6 +96,7 @@ public class Jeu {
 			MonAlea alea = new MonAlea();
 			alea.tirage(p.getTroupeau(), p.getB());
 			p.incrementeCompteur();
+			
 			if (!p.getTroupeau().isEstDansGrange()) {
 				p.decrementHerbe();
 			}
