@@ -37,6 +37,7 @@ public class Loups extends ConsequenceAlea {
 				int fatigue = b.getJaugeFatigue() - 3;
 				System.out.println("Votre jauge de fatigue passe a " + fatigue);
 				b.setJaugeFatigue(fatigue);
+				moutons.setEstDansGrange(true);
 			}
 		} else {
 			System.out.println("Vous êtes protégés, vos moutons sont déjà dans la grange");
