@@ -16,9 +16,7 @@ public class Tempete implements Alea  {
 				res = sc.nextLine();
 			}
 			if (res.equals("2") || b.getJaugeFatigue() < 5) {
-				if (b.getJaugeFatigue() < 5) {
-					System.out.println(Texts.getBergerFatigue());
-				}
+				
 				int nbMoutonMort = (int) (moutons.getNbMouton() * (Math.random() / 3));
 				if (nbMoutonMort == 0) {
 					nbMoutonMort ++;
@@ -30,6 +28,9 @@ public class Tempete implements Alea  {
 					moutons.setNbMalade(moutons.getNbMouton());
 				}
 			} else {
+				if (b.getJaugeFatigue() < 5) {
+					System.out.println(Texts.getBergerFatigue());
+				}
 				int fatigue = b.getJaugeFatigue() - 5;
 				System.out.println("Votre jauge de fatigue passe a " + fatigue);
 				b.setJaugeFatigue(fatigue);

@@ -73,33 +73,37 @@ public class TroupeauMouton {
 		String res = "";
 		int nbm1 = this.nbMouton;
 		int nbm2 = this.nbMouton;
-		int nbMlde = this.nbMalade;
+		int nbMlde1 = this.nbMalade;
+		int nbMlde2 = this.nbMalade;
 		int n = 0;
 		while (nbm1 > 0) {
 			for (int i = 0; i < 15 && nbm1 > 0; i++) {
-				if (nbMlde > i && n < nbMlde) {
+				if (0 < nbMlde1 && 15 * (n+1) > this.nbMalade) {
 					res += Texts.ANSI_RED + "  ,---@>" + Texts.ANSI_RESET;
-					n++;
+					nbMlde1--;
 				} else {
 					res += "  ,---@>";
 				}
 				nbm1--;
 			}
-			n=0;
 			res += "\n";
 			for (int i = 0; i < 15 && nbm2 > 0; i++) {
-				if (nbMlde > i && n < nbMlde ) {
+				if (0 < nbMlde2 && 15 * (n+1) > this.nbMalade) {
 					res += Texts.ANSI_RED + "   W-W' " + Texts.ANSI_RESET;
-					n++;
+					nbMlde2--;
 				} else {
 					res += "   W-W' ";
 				}
 				nbm2--;
 			}
 			res += "\n\n";
-			
+			n++;
+
 		}
 		return res;
 	}
-	
+
 }
+
+
+
