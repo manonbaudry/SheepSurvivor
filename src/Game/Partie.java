@@ -58,7 +58,7 @@ public class Partie {
 	}
 	
 	public void afichageDonnees() {
-		System.out.println("\nTour n°" + compteur +
+		System.out.println("\nTOUR N°" + compteur +
 				"\nEnergie du berger :" + b.showJaugeFatigue()+
 				"\nSatiété des moutons :" + troupeau.showJaugeFaim() +
 				"\n" +troupeau.toString());
@@ -105,6 +105,14 @@ public class Partie {
 	}
 	
 	public void variationFaimMouton() {
+		if (troupeau.getJaugeFaim() == 0) {
+			int nbMort = (int)(troupeau.getNbMouton() * Math.random() / 4);
+			if (nbMort == 0) {
+				nbMort ++;
+			}
+			System.out.println("Vos moutons ont faim !\n"
+					+ nbMort + " mouton(s) sont morts de faim.");
+		}
 		if(troupeau.isEstDansGrange() || herbe < 1) {
 			troupeau.setJaugeFaim(troupeau.getJaugeFaim()-2);
 		}else if (troupeau.getJaugeFaim()<10) {
@@ -112,6 +120,7 @@ public class Partie {
 			troupeau.setJaugeFaim(troupeau.getJaugeFaim()+1);
 			decrementHerbe();
 		}
+		
 	}
 	
 	public void decrementHerbe() {

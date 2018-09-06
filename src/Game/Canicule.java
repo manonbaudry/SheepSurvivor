@@ -21,7 +21,10 @@ public class Canicule implements Alea {
 			berger.setJaugeFatigue(berger.getJaugeFatigue()- 4);
 			System.out.println("Vous avez tondu les moutons");
 		}else {
-			
+
+			if (berger.getJaugeFatigue() <  4 && res2.equals("1")) {
+				System.out.println(Texts.getBergerFatigue());
+			}
 			if (moutons.getNbMalade() > 0) {
 				System.out.println("La canicule a tué tous vos moutons malades !");
 				moutons.setNbMouton(moutons.getNbMouton() - moutons.getNbMalade());

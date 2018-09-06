@@ -64,6 +64,7 @@ public class Jeu {
 			MonAlea alea = new MonAlea();
 			alea.tirage(p.getTroupeau(), p.getB());
 			p.incrementeCompteur();
+			p.decrementHerbe();
 			p.variationFaimMouton();
 			p.decrementHerbe();
 			if(p.getHerbe()<1) {
@@ -88,7 +89,7 @@ public class Jeu {
 		if(p.isGagne()) {
 			System.out.println("Bravo tu as sauvé tes moutons !");
 		}else {
-			System.out.println("Tu as perdu, tous tes moutons sont morts...");
+			System.out.println("Vous avez perdu, tous tes moutons sont morts...");
 		}
 	}
 
