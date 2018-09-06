@@ -1,6 +1,7 @@
 package Game;
 
-public enum Alea {
-	LOUPS, TEMPETE, NAISSANCE, TOMBOLA, RIEN, MALADIE, CANNICULE;//, FAMINE(0)
+public interface Alea {
+
+	public void effectuerAlea(TroupeauMouton moutons, Berger berger);
+	
 }
- 
