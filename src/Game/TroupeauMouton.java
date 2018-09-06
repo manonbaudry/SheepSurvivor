@@ -52,6 +52,9 @@ public class TroupeauMouton {
 	public void setJaugeFaim(int jaugeFaim) {
 		this.jaugeFaim = jaugeFaim;
 	}
+	public void resetJaugeFaim() {
+		this.jaugeFaim = 10;
+	}
 
 	public String showJaugeFaim() {
 		String res = "";
