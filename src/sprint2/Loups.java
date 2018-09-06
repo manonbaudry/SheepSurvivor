@@ -11,7 +11,7 @@ public class Loups extends ConsequenceAlea {
 	@Override
 	public void effectuerAlea(TroupeauMouton moutons, Berger b) {
 		System.out.println(Texts.getAleaLoups());
-
+		if(moutons.isEstDansGrange()) {
 		System.out.println("Voulez-vous rentrer vos moutons dans la bergerie ?\n" + "1- Oui\n" + "2- Non\n");
 		Scanner sc = new Scanner(System.in);
 		String res = sc.nextLine();
@@ -40,6 +40,9 @@ public class Loups extends ConsequenceAlea {
 			int fatigue = b.getJaugeFatigue() - 3;
 			System.out.println("Votre jauge de fatigue passe a " + fatigue);
 			b.setJaugeFatigue(fatigue);
+		}
+		}else {
+			System.out.println("Vous êtes protégés, vos moutons sont déjà dans la grange");
 		}
 
 	}
