@@ -93,5 +93,13 @@ public class Partie {
 			finPartie = true;
 		}
 	}
+	public void variationFaimMouton() {
+		if(troupeau.isEstDansGrange()) {
+			troupeau.setJaugeFaim(troupeau.getJaugeFaim()-2);
+		}else if (troupeau.getJaugeFaim()<10) {
+			 
+			troupeau.setJaugeFaim(troupeau.getJaugeFaim()+1);
+		}
+	}
 
 }

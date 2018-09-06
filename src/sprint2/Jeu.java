@@ -34,6 +34,7 @@ public class Jeu {
 			MonAlea alea = new MonAlea();
 			alea.tirage(p.getTroupeau(), p.getB());
 			p.incrementeCompteur();
+			p.variationFaimMouton();
 			p.finPartie();
 			Util.delay();
 		}
