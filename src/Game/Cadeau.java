@@ -4,7 +4,7 @@ public class Cadeau implements Alea {
 
 	@Override
 	public void effectuerAlea(TroupeauMouton moutons, Berger berger) {
-		int nbCadeau = 1+(int)(Math.random()*9);
+		int nbCadeau = 1+(int)(Math.random()*4);
 		
 		System.out.println(Texts.getAleaCadeau(nbCadeau));
 		
