@@ -75,6 +75,6 @@ public class Texts {
 	}
 	
 	public static String getAleaCannicule() {
-		return ("Cannicule en approche. Vos moutons vont mourir de chaud si vous ne les tondez pas !");
+		return ("Canicule en approche. Vos moutons vont mourir de chaud si vous ne les tondez pas !");
 	}
 }
