@@ -90,7 +90,10 @@ public class Jeu {
 			MonAlea alea = new MonAlea();
 			alea.tirage(p.getTroupeau(), p.getB());
 			p.incrementeCompteur();
-			p.decrementHerbe();
+			if(! p.getTroupeau().isEstDansGrange()) {
+				p.decrementHerbe();
+			}
+			
 			p.variationFaimMouton();
 			if (p.getHerbe() < 1) {
 				System.out.println("il n'y a plus d'herbe dans la prairie... Voulez-vous bouger vos moutons ? (-2 pt)\n"
