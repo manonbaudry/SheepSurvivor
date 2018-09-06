@@ -42,7 +42,7 @@ public class Loups extends ConsequenceAlea {
 			b.setJaugeFatigue(fatigue);
 		}
 
-		sc.close();
+	//	sc.close();
 	}
 	
 	public static void main(String[] args) {

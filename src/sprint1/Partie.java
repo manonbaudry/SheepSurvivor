@@ -50,7 +50,7 @@ public class Partie {
 
 		System.out.print("Saisir votre nom:");
 		String str = sc.nextLine();
-		sc.close();
+//		sc.close();
 		return str;
 	}
 	

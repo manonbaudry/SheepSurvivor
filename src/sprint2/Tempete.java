@@ -18,7 +18,7 @@ public class Tempete extends ConsequenceAlea {
 		while (!res.matches("[1-2]")) {
 			res = sc.nextLine();
 		}
-		sc.close();
+		//sc.close();
 		if (res.equals("2") || b.getJaugeFatigue() < 5) {
 			int nbMoutonMort = moutons.getNbMouton() / 33;
 			System.out.println("Mince, vous n'avez pas réussi à sauver tous les moutons !\n" + nbMoutonMort
