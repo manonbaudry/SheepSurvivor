@@ -57,13 +57,30 @@ public class Jeu {
 						p.getTroupeau().setNbMalade(0);
 					}
 				}else {
-					
+					System.out.println(Texts.getBergerFatigue());
 				}
 			}
 			MonAlea alea = new MonAlea();
 			alea.tirage(p.getTroupeau(), p.getB());
 			p.incrementeCompteur();
 			p.variationFaimMouton();
+			if(p.getHerbe()<1) {
+				System.out.println("il n'y a plus d'herbe dans la prairie... Voulez-vous bouger vos motons ?  1-oui, 2-non");
+				Scanner sc = new Scanner(System.in);
+				String rep = sc.nextLine();
+				while (! rep.matches("[1-2]")) {
+					rep = sc.nextLine();
+				}
+				if(rep.equals("1")){
+					System.out.println("Vous avez bougé vos moutons");
+					p.resetHerbe();
+					p.getB().setJaugeFatigue(p.getB().getJaugeFatigue()-2);
+					
+				}else {
+					System.out.println("Vos moutons n'ont plus à manger");
+				}
+				
+			}
 			p.finPartie();
 			Util.delay();
 		}

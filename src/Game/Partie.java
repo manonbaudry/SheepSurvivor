@@ -11,6 +11,18 @@ public class Partie {
 	private TroupeauMouton troupeau;
 	private int compteur;
 	private boolean finPartie;
+	private int herbe;
+	/**
+	 * @param b
+	 * @param troupeau
+	 */
+	public Partie(Berger b, TroupeauMouton troupeau) {
+		this.b = b;
+		this.troupeau = troupeau;
+		this.compteur = 0;
+		this.finPartie = false;
+		this.herbe = 10;
+	}
 	/**
 	 * @return the compteur
 	 */
@@ -32,18 +44,7 @@ public class Partie {
 		return finPartie;
 	}
 
-	
-	
-	/**
-	 * @param b
-	 * @param troupeau
-	 */
-	public Partie(Berger b, TroupeauMouton troupeau) {
-		this.b = b;
-		this.troupeau = troupeau;
-		this.compteur = 0;
-		this.finPartie = false;
-	}
+
 
 	public static String saisieNom() {
 		Scanner sc = new Scanner(System.in);
@@ -94,12 +95,32 @@ public class Partie {
 		}
 	}
 	public void variationFaimMouton() {
-		if(troupeau.isEstDansGrange()) {
+		if(troupeau.isEstDansGrange() || herbe < 1) {
 			troupeau.setJaugeFaim(troupeau.getJaugeFaim()-2);
 		}else if (troupeau.getJaugeFaim()<10) {
 			 
 			troupeau.setJaugeFaim(troupeau.getJaugeFaim()+1);
+			decrementHerbe();
 		}
 	}
-
+	
+	public void decrementHerbe() {
+		this.herbe --;
+	}
+	
+	public void resetHerbe() {
+		this.herbe = 10;
+	}
+	/**
+	 * @return the herbe
+	 */
+	public int getHerbe() {
+		return herbe;
+	}
+	/**
+	 * @param herbe the herbe to set
+	 */
+	public void setHerbe(int herbe) {
+		this.herbe = herbe;
+	}
 }
