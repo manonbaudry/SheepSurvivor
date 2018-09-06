@@ -8,7 +8,7 @@ public class Canicule implements Alea {
 	public void effectuerAlea(TroupeauMouton moutons, Berger berger) {
 
 		System.out.println(Texts.getAleaCannicule());
-		System.out.println("Voulez-vous tondre la laine des moutons ?\n"
+		System.out.println("Voulez-vous tondre la laine des moutons ?(-4 pt)\n"
 				+ "1- Oui\n"
 				+ "2- Non\n");
 		Scanner sc = new Scanner(System.in);
@@ -19,8 +19,12 @@ public class Canicule implements Alea {
 		if (res2.equals("1") && berger.getJaugeFatigue() >= 4) {
 			//Baisser fatigue berger
 			berger.setJaugeFatigue(berger.getJaugeFatigue()- 4);
+			System.out.println("Vous avez tondu les moutons");
 		}else {
-			
+
+			if (berger.getJaugeFatigue() <  4 && res2.equals("1")) {
+				System.out.println(Texts.getBergerFatigue());
+			}
 			if (moutons.getNbMalade() > 0) {
 				System.out.println("La canicule a tué tous vos moutons malades !");
 				moutons.setNbMouton(moutons.getNbMouton() - moutons.getNbMalade());

@@ -9,7 +9,7 @@ public class Tempete implements Alea  {
 		System.out.println(Texts.getAleaTempete());
 
 		if (!moutons.isEstDansGrange()) {
-			System.out.println("Voulez-vous rentrer vos moutons dans la bergerie ?\n" + "1- Oui\n" + "2- Non\n");
+			System.out.println("Voulez-vous rentrer vos moutons dans la bergerie ?(-5 pt)\n" + "1- Oui\n" + "2- Non\n");
 			Scanner sc = new Scanner(System.in);
 			String res = sc.nextLine();
 			while (!res.matches("[1-2]")) {
@@ -35,7 +35,7 @@ public class Tempete implements Alea  {
 			}
 
 		} else {
-			System.out.println("Vous êtes protégés, vos moutons sont déjà dans la grange");
+			System.out.println("Ouf, vos moutons sont déjà à l'abri dans la bergerie.");
 		}
 	}
 
