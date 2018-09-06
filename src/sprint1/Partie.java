@@ -57,9 +57,14 @@ public class Partie {
 	public void afichageDonnees() {
 		System.out.println(b.getNom() + 
 				"\nEnergie:" + b.showJaugeFatigue()+
-				"\nTour n°" + compteur +
+				"\nTour n°" + compteur + 
 				"\nT R O U P E A U :\n S A N T É :" + troupeau.getJaugeFaim() +
 				"\n" +troupeau.toString());
+		if(troupeau.isEstDansGrange()) {
+			System.out.println("Le troupeau est dans la grange");
+		}else {
+			System.out.println("Le troupeau est dans la prairie");
+		}
 	}
 	
 	/**
@@ -86,6 +91,14 @@ public class Partie {
 	public void finPartie() {
 		if(compteur > 20) {
 			finPartie = true;
+		}
+	}
+	public void variationFaimMouton() {
+		if(troupeau.isEstDansGrange()) {
+			troupeau.setJaugeFaim(troupeau.getJaugeFaim()-2);
+		}else if (troupeau.getJaugeFaim()<10) {
+			 
+			troupeau.setJaugeFaim(troupeau.getJaugeFaim()+1);
 		}
 	}
 
