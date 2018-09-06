@@ -62,16 +62,10 @@ public class JeuMouton {
 		if (jeu[coup] == Case.VIDE) {
 			return false;
 		}
-		if (coup == jeu.length-1) {
-			return false;
-		}
 		if (coup == jeu.length-2) {
 			if (jeu[coup] == Case.DROIT && jeu[coup + 1] != Case.VIDE) {
 				return false;
 			}	
-		}
-		if (coup == 0) {
-			return false;
 		}
 		if (coup == 1) {
 			if (jeu[coup] == Case.GAUCHE && jeu[coup - 1] != Case.VIDE) {

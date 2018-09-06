@@ -21,8 +21,6 @@ public class MonAlea {
 			new Tempete().effectuerAlea(t, b);
 		}else if (tirage < 0.5) {
 			new Loups().effectuerAlea(t, b);
-		}else if (tirage < 0.55) {
-			new SauteMouton().effectuerAlea(t, b);
 		} else if (tirage < 0.65) { 
 			new Tombola().effectuerAlea(t, b);
 		}else if (tirage < 0.8) {
