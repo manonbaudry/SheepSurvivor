@@ -106,7 +106,10 @@ public class Partie {
 	
 	public void variationFaimMouton() {
 		if (troupeau.getJaugeFaim() == 0) {
-			int nbMort = (int)(troupeau.getNbMouton() * Math.random());
+			int nbMort = (int)(troupeau.getNbMouton() * Math.random() / 4);
+			if (nbMort == 0) {
+				nbMort ++;
+			}
 			System.out.println("Vos moutons ont faim !\n"
 					+ nbMort + " mouton(s) sont morts de faim.");
 		}
