@@ -64,7 +64,7 @@ public class Partie {
 		if(troupeau.isEstDansGrange()) {
 			System.out.println("Le troupeau est dans la grange");
 		}else {
-			System.out.println("Le troupeau est dans la prairie"
+			System.out.println("Le troupeau est dans la prairie\n"
 					+ "Quantité d'herbe dans la prairie" + showHerbe());
 			
 		}
