@@ -65,10 +65,13 @@ public class SauteMouton implements Alea{
 		SauteMouton sm = new SauteMouton();
 		sm.run();
 		if (sm.getGagnant()) {
-			System.out.println("Bravo aucun mouton ne s'est echapper");
+			System.out.println("Bravo, aucun mouton ne s'est échappé");
 		}else {
-			int nbMoutonEchappe = (int)(moutons.getNbMouton()*0.2);
-			System.out.println("Mince "+nbMoutonEchappe+" mouton(s) se sont echapper");
+			int nbMoutonEchappe = (int)(moutons.getNbMouton()* Math.random() / 5);
+			if (nbMoutonEchappe == 0 ) {
+				nbMoutonEchappe ++;
+			}
+			System.out.println("Oh non, "+nbMoutonEchappe+" mouton(s) se sont/ s'est echappé(s) !");
 			moutons.setNbMouton(moutons.getNbMouton()-nbMoutonEchappe);
 		}
 	}

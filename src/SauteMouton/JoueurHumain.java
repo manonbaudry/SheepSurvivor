@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class JoueurHumain{
 
 	public int coupAJouer(ArrayList<Integer> possibles) {
-		System.out.print("Les coups possibles : ");
+		System.out.print("Coups possibles : ");
 		for (Integer integer : possibles) {
 			System.out.print(integer+" ");
 		}

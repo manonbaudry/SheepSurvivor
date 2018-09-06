@@ -35,7 +35,7 @@ public class Tempete implements Alea  {
 			}
 
 		} else {
-			System.out.println("Vous êtes protégés, vos moutons sont déjà dans la grange");
+			System.out.println("Ouf, vos moutons sont déjà à l'abri dans la bergerie.");
 		}
 	}
 
