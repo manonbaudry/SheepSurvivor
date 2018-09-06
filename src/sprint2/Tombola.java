@@ -112,12 +112,12 @@ public class Tombola extends ConsequenceAlea{
 		double berger = Double.parseDouble(res);
 		double liftBerger = (poids - berger) * (poids - berger);
 		if (liftBerger < liftJ1 && liftBerger < liftJ2 && liftBerger < liftJ3) {
-			System.out.println("Félicitations ! Le mouton pesait " + poids + " kg !"
+			System.out.println("Félicitations ! Le mouton pesait " + ((int)(poids*100)/100) + " kg !"
 					+ "Vous avez remporté le mouton, il rentrera avec vous.\n" + mouton);
 			moutons.setNbMouton(moutons.getNbMouton()+1);
 		}else {
 			System.out.println("Dommage, un participant a visé plus juste que vous."
-					+ "Le mouton pesait " + poids + " kg.");
+					+ "Le mouton pesait " + ((int)(poids*100)/100) + " kg.");
 		}
 	}
 
