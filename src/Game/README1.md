@@ -1,6 +1,6 @@
 # Rétrospective de sprint 1
 
-Nom du scrum master du sprint : Manon Beaudry
+Nom du scrum master du sprint : Potier Florian
 
 ## Ce que nous avons fait durant ce sprint
 	-Création du joueur(Berger)
