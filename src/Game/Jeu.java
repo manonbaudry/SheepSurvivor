@@ -79,15 +79,10 @@ public class Jeu {
 				}else {
 					System.out.println("Vos moutons n'ont plus à manger");
 				}
-				
 			}
 			p.finPartie();
 			Util.delay();
 		}
-
-		
-		
-
 	}
 
 }

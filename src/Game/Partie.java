@@ -64,7 +64,9 @@ public class Partie {
 		if(troupeau.isEstDansGrange()) {
 			System.out.println("Le troupeau est dans la grange");
 		}else {
-			System.out.println("Le troupeau est dans la prairie");
+			System.out.println("Le troupeau est dans la prairie"
+					+ "Quantité d'herbe dans la prairie" + showHerbe());
+			
 		}
 	}
 	
@@ -122,5 +124,17 @@ public class Partie {
 	 */
 	public void setHerbe(int herbe) {
 		this.herbe = herbe;
+	}
+	
+	public String showHerbe() {
+		String res = "";
+		for (int i = 0; i < 10; i++) {
+			if (herbe>i) {
+				res+="#";
+			}else {
+				res+=".";
+			}
+		}
+		return res;
 	}
 }
