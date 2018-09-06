@@ -65,4 +65,8 @@ public class Texts {
 	public static String getAleaTombola() {
 		return "Tombola au village : tentez de gagner un mouton !\n";
 	}
+	
+	public static String getBergerFatigue() {
+		return ("Le berger est trop fatigué pour effectuer cette tâche. Vous devriez prendre un jour de congé !");
+	}
 }

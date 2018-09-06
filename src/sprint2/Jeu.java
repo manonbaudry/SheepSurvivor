@@ -48,6 +48,26 @@ public class Jeu {
 					p.getTroupeau().setEstDansGrange(false);
 				}
 			}
+			if (p.getTroupeau().getNbMalade() >  0) {
+				p.getTroupeau().setNbMalade(p.getTroupeau().getNbMalade() + (int)(Math.random()*(p.getTroupeau().getNbMouton()-p.getTroupeau().getNbMalade()) / 3));
+				System.out.println("La maladie s'est propagée ! Il y a désormais " + p.getTroupeau().getNbMalade() + " moutons malades.");
+				if (p.getB().getJaugeFatigue() >= 5) {
+					System.out.println("Voulez-vous abattre les moutons malades ? 1-oui, 2-non");
+					Scanner sc = new Scanner(System.in);
+					String rep = "";
+					while (! rep.matches("[1-2]")) {
+						rep = sc.nextLine();
+					}
+					if (rep.equals("1")) {
+						System.out.println("Vous avez abattu les " + p.getTroupeau().getNbMalade() + " moutons malades.");
+						p.getB().setJaugeFatigue(p.getB().getJaugeFatigue()-2);
+						p.getTroupeau().setNbMouton(p.getTroupeau().getNbMouton()-p.getTroupeau().getNbMalade());
+						p.getTroupeau().setNbMalade(0);
+					}
+				}else {
+					
+				}
+			}
 			MonAlea alea = new MonAlea();
 			alea.tirage(p.getTroupeau(), p.getB());
 			p.incrementeCompteur();

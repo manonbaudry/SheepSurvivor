@@ -24,20 +24,7 @@ public class Maladie extends ConsequenceAlea {
 		}
 		System.out.println(Texts.getAleaMaladie());
 		moutons.setNbMalade(moutons.getNbMalade() + (int)(Math.random()*(moutons.getNbMouton()-moutons.getNbMalade()) / 3));
-		if (berger.getJaugeFatigue() >= 2) {
-			System.out.println("Voulez-vous abattre les moutons malades ? 1-oui, 2-non");
-			Scanner sc = new Scanner(System.in);
-			String rep = "";
-			while (! rep.matches("[1-2]")) {
-				rep = sc.nextLine();
-			}
-			if (rep.equals("1")) {
-				System.out.println("Vous avez abattu les " + moutons.getNbMalade() + " moutons malades.");
-				berger.setJaugeFatigue(berger.getJaugeFatigue()-2);
-				moutons.setNbMouton(moutons.getNbMouton()-moutons.getNbMalade());
-				moutons.setNbMalade(0);
-			}
-		}
+		
 	}
 
 	public static void main(String[] args) {
