@@ -1,5 +1,6 @@
 package Game;
 
+
 public class TroupeauMouton {
 
 	private int nbMalade;
@@ -70,10 +71,12 @@ public class TroupeauMouton {
 		int nbm1 = this.nbMouton;
 		int nbm2 = this.nbMouton;
 		int nbMlde = this.nbMalade;
+		int n = 0;
 		while (nbm1 > 0) {
 			for (int i = 0; i < 15 && nbm1 > 0; i++) {
-				if (nbMlde > i) {
+				if (nbMlde > i && n < nbMlde) {
 					res += Texts.ANSI_RED + "  ,---@>" + Texts.ANSI_RESET;
+					
 				} else {
 					res += "  ,---@>";
 				}
@@ -81,7 +84,8 @@ public class TroupeauMouton {
 			}
 			res += "\n";
 			for (int i = 0; i < 15 && nbm2 > 0; i++) {
-				if (nbMlde > i) {
+				if (nbMlde > i && n < nbMlde ) {
+					n++;
 					res += Texts.ANSI_RED + "   W-W' " + Texts.ANSI_RESET;
 				} else {
 					res += "   W-W' ";
@@ -90,6 +94,7 @@ public class TroupeauMouton {
 
 			}
 			res += "\n\n";
+			
 		}
 		return res;
 	}
