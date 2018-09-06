@@ -21,7 +21,7 @@ public class Canicule implements Alea {
 			berger.setJaugeFatigue(berger.getJaugeFatigue()- 4);
 		}else {
 
-			if (berger.getJaugeFatigue() <  4) {
+			if (berger.getJaugeFatigue() <  4 && res2.equals("1")) {
 				System.out.println(Texts.getBergerFatigue());
 			}
 			if (moutons.getNbMalade() > 0) {
