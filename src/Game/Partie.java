@@ -58,7 +58,7 @@ public class Partie {
 	}
 	
 	public void afichageDonnees() {
-		System.out.println("\nTour n°" + compteur +
+		System.out.println("\nTOUR N°" + compteur +
 				"\nEnergie du berger :" + b.showJaugeFatigue()+
 				"\nSatiété des moutons :" + troupeau.showJaugeFaim() +
 				"\n" +troupeau.toString());

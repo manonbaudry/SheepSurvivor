@@ -73,7 +73,7 @@ public class Tombola implements Alea {
 		double r = 0;
 		do {
 			r = Math.random();
-		} while (r == 0);
+		} while (r < 0.1);
 	
 		String mouton = "";
 		double poids = 10;
