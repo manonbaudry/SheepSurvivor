@@ -70,7 +70,11 @@ public class Tombola extends ConsequenceAlea{
 	public void effectuerAlea(TroupeauMouton moutons, Berger b) {
 		System.out.println(Texts.getAleaTombola());
 		System.out.println("Un mouton vous est présenté :");
-		double r = Math.random();
+		double r = 0;
+		do {
+			r = Math.random();
+		} while (r == 0);
+	
 		String mouton = "";
 		double poids = 10;
 		if (r < 0.25) {
