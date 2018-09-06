@@ -12,7 +12,7 @@ public class Tempete extends ConsequenceAlea {
 	public void effectuerAlea(TroupeauMouton moutons, Berger b) {
 		System.out.println(Texts.getAleaTempete());
 
-		if (moutons.isEstDansGrange()) {
+		if (!moutons.isEstDansGrange()) {
 			System.out.println("Voulez-vous rentrer vos moutons dans la bergerie ?\n" + "1- Oui\n" + "2- Non\n");
 			Scanner sc = new Scanner(System.in);
 			String res = sc.nextLine();
@@ -34,8 +34,8 @@ public class Tempete extends ConsequenceAlea {
 				moutons.setEstDansGrange(true);
 
 			}
-				
-		}else {
+
+		} else {
 			System.out.println("Vous êtes protégés, vos moutons sont déjà dans la grange");
 		}
 	}
