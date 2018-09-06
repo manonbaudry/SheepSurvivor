@@ -49,9 +49,9 @@ public class SauteMouton implements Alea{
 			jeu.executer(pedro.coupAJouer(jeu.coupsPossibles()));
 		}
 		if (jeu.gagnant()) {
-			System.out.println("T'as gagné ");
+			System.out.println("Vous avez gagné ");
 		} else {
-			System.out.println("T'as perdu");
+			System.out.println("Vous avez perdu");
 		}
 	}
 	

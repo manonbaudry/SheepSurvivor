@@ -8,14 +8,14 @@ public class Loups implements Alea {
 	public void effectuerAlea(TroupeauMouton moutons, Berger b) {
 		System.out.println(Texts.getAleaLoups());
 		if (!moutons.isEstDansGrange()) {
-			System.out.println("Voulez-vous rentrer vos moutons dans la bergerie ?\n" + "1- Oui\n" + "2- Non\n");
+			System.out.println("Voulez-vous rentrer vos moutons dans la bergerie ?(-3 pt)\n" + "1- Oui\n" + "2- Non\n");
 			Scanner sc = new Scanner(System.in);
 			String res = sc.nextLine();
 			while (!res.matches("[1-2]")) {
 				res = sc.nextLine();
 			}
 			if (res.equals("2") || b.getJaugeFatigue() < 3) {
-				System.out.println("Voulez-vous pourchasser les loups pour espérer sauver vos moutons ?\n" + "1- Oui\n"
+				System.out.println("Voulez-vous pourchasser les loups pour espérer sauver vos moutons ?(-4 pt)\n" + "1- Oui\n"
 						+ "2- Non\n");
 				String res2 = sc.nextLine();
 				while (!res2.matches("[1-2]")) {

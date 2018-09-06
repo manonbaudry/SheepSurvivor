@@ -45,7 +45,7 @@ public class Jeu {
 				p.getTroupeau().setNbMalade(p.getTroupeau().getNbMalade() + (int)(Math.random()*(p.getTroupeau().getNbMouton()-p.getTroupeau().getNbMalade()) / 3));
 				System.out.println("La maladie s'est propagée ! Il y a désormais " + p.getTroupeau().getNbMalade() + " moutons malades.");
 				if (p.getB().getJaugeFatigue() >= 5) {
-					System.out.println("Voulez-vous abattre les moutons malades ? 1-oui, 2-non");
+					System.out.println("Voulez-vous abattre les moutons malades ?(-2 pt)\n"+"1- Oui\n"+" 2- Non\n");
 					Scanner sc = new Scanner(System.in);
 					String rep = "";
 					while (! rep.matches("[1-2]")) {
@@ -65,8 +65,9 @@ public class Jeu {
 			alea.tirage(p.getTroupeau(), p.getB());
 			p.incrementeCompteur();
 			p.variationFaimMouton();
+			p.decrementHerbe();
 			if(p.getHerbe()<1) {
-				System.out.println("il n'y a plus d'herbe dans la prairie... Voulez-vous bouger vos motons ?  1-oui, 2-non");
+				System.out.println("il n'y a plus d'herbe dans la prairie... Voulez-vous bouger vos moutons ? (-2 pt)\n"+"1- Oui\n"+"2- Non\n");
 				Scanner sc = new Scanner(System.in);
 				String rep = sc.nextLine();
 				while (! rep.matches("[1-2]")) {
