@@ -53,6 +53,7 @@ public class Jeu {
 			if (p.getTroupeau().getJaugeFaim() < 1) {
 				System.out.println("Certains moutons sont mort de malnutrition");
 				int nbDead = (int)(p.getTroupeau().getNbMouton()*0.2);
+				p.getTroupeau().setNbMouton(p.getTroupeau().getNbMouton()-nbDead);
 			}
 			
 			if (p.getTroupeau().isEstDansGrange()) {
