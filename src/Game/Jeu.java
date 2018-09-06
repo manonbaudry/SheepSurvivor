@@ -19,7 +19,7 @@ public class Jeu {
 		System.out.println("1- Jeu");
 		System.out.println("2- Regle");
 		System.out.println("3- Quitter");
-		
+
 		Scanner sc = new Scanner(System.in);
 		String res = "";
 		while (!res.matches("[1-3]")) {
@@ -28,7 +28,7 @@ public class Jeu {
 		if (res.equals("1")) {
 			Util.cls();
 			run();
-		}else if (res.equals("2")) {
+		} else if (res.equals("2")) {
 			Util.cls();
 			System.out.println(Texts.getRegles());
 			System.out.println("\nTapper menu pour revenir");
@@ -39,17 +39,22 @@ public class Jeu {
 			}
 			Util.cls();
 			menu();
-		}else {
+		} else {
 			System.exit(0);
 		}
 	}
 
 	public void run() {
-		
+
 		Partie p = new Partie(new Berger(Partie.saisieNom()), new TroupeauMouton(30));
 		while (!p.isFinPartie()) {
 			Util.cls();
 			p.afichageDonnees();
+			if (p.getTroupeau().getJaugeFaim() < 1) {
+				System.out.println("Certains moutons sont mort de malnutrition");
+				int nbDead = (int)(p.getTroupeau().getNbMouton()*0.2);
+			}
+			
 			if (p.getTroupeau().isEstDansGrange()) {
 				System.out.println("Voulez-vous sortir les moutons dans le pré ?\n" + "1- Oui\n" + "2- Non\n");
 				Scanner sc = new Scanner(System.in);
@@ -61,14 +66,14 @@ public class Jeu {
 					p.getTroupeau().setEstDansGrange(false);
 				}
 			}
-
+			
 			if (p.getTroupeau().getNbMalade() > 0) {
 				p.getTroupeau().setNbMalade(p.getTroupeau().getNbMalade()
 						+ (int) (Math.random() * (p.getTroupeau().getNbMouton() - p.getTroupeau().getNbMalade()) / 3));
 				System.out.println("La maladie s'est propagée ! Il y a désormais " + p.getTroupeau().getNbMalade()
 						+ " moutons malades.");
 				if (p.getB().getJaugeFatigue() >= 5) {
-					System.out.println("Voulez-vous abattre les moutons malades ?(-2 pt)\n" + "1- Oui\n" + " 2- Non\n");
+					System.out.println("Voulez-vous abattre les moutons malades ?(-2 pt)\n" + "1- Oui\n" + "2- Non\n");
 					Scanner sc = new Scanner(System.in);
 					String rep = "";
 					while (!rep.matches("[1-2]")) {
@@ -80,7 +85,7 @@ public class Jeu {
 						p.getB().setJaugeFatigue(p.getB().getJaugeFatigue() - 2);
 						p.getTroupeau().setNbMouton(p.getTroupeau().getNbMouton() - p.getTroupeau().getNbMalade());
 						p.getTroupeau().setNbMalade(0);
-					}else {
+					} else {
 						System.out.println(Texts.getBergerFatigue());
 					}
 				} else {
@@ -90,10 +95,10 @@ public class Jeu {
 			MonAlea alea = new MonAlea();
 			alea.tirage(p.getTroupeau(), p.getB());
 			p.incrementeCompteur();
-			if(! p.getTroupeau().isEstDansGrange()) {
+			if (!p.getTroupeau().isEstDansGrange()) {
 				p.decrementHerbe();
 			}
-			
+
 			p.variationFaimMouton();
 			if (p.getHerbe() < 1) {
 				System.out.println("il n'y a plus d'herbe dans la prairie... Voulez-vous bouger vos moutons ? (-2 pt)\n"

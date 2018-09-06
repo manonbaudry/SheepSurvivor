@@ -7,12 +7,13 @@ package Game;
 import java.util.Scanner;
 
 public class Partie {
-	private Berger b; 
+	private Berger b;
 	private TroupeauMouton troupeau;
 	private int compteur;
 	private boolean finPartie;
 	private int herbe;
-	private boolean gagne; 
+	private boolean gagne;
+
 	/**
 	 * @param b
 	 * @param troupeau
@@ -25,6 +26,7 @@ public class Partie {
 		this.herbe = 10;
 		this.gagne = false;
 	}
+
 	/**
 	 * @return the compteur
 	 */
@@ -33,7 +35,8 @@ public class Partie {
 	}
 
 	/**
-	 * @param compteur the compteur to set
+	 * @param compteur
+	 *            the compteur to set
 	 */
 	public void incrementeCompteur() {
 		compteur++;
@@ -46,31 +49,27 @@ public class Partie {
 		return finPartie;
 	}
 
-
-
 	public static String saisieNom() {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("Saisir votre nom:");
 		String str = sc.nextLine();
-//		sc.close();
+		// sc.close();
 		return str;
 	}
-	
+
 	public void afichageDonnees() {
-		System.out.println("\nTOUR N°" + compteur +
-				"\nEnergie du berger :" + b.showJaugeFatigue()+
-				"\nSatiété des moutons :" + troupeau.showJaugeFaim() +
-				"\n" +troupeau.toString());
-		if(troupeau.isEstDansGrange()) {
+		System.out.println("\nTOUR N°" + compteur + "\nEnergie du berger :" + b.showJaugeFatigue()
+				+ "\nSatiété des moutons :" + troupeau.showJaugeFaim() + "\nNombre de mouton" + troupeau.getNbMouton()
+				+ "\n" + troupeau.toString());
+		if (troupeau.isEstDansGrange()) {
 			System.out.println("Le troupeau est dans la grange");
-		}else {
-			System.out.println("Le troupeau est dans la prairie\n"
-					+ "Quantité d'herbe dans la prairie :" + showHerbe());
-			
+		} else {
+			System.out
+					.println("Le troupeau est dans la prairie\n" + "Quantité d'herbe dans la prairie :" + showHerbe());
 		}
 	}
-	
+
 	/**
 	 * @return the b
 	 */
@@ -86,74 +85,76 @@ public class Partie {
 	}
 
 	/**
-	 * @param troupeau the troupeau to set
+	 * @param troupeau
+	 *            the troupeau to set
 	 */
 	public void setTroupeau(TroupeauMouton troupeau) {
 		this.troupeau = troupeau;
 	}
-	
-	
-	
+
 	public void finPartie() {
-		if(compteur > 20){
+		if (compteur > 20) {
 			finPartie = true;
 			gagne = true;
-		}else if(troupeau.getNbMouton()<1) {
+		} else if (troupeau.getNbMouton() < 1) {
 			finPartie = true;
 			gagne = false;
 		}
 	}
-	
+
 	public void variationFaimMouton() {
 		if (troupeau.getJaugeFaim() == 0) {
-			int nbMort = (int)(troupeau.getNbMouton() * Math.random() / 4);
+			int nbMort = (int) (troupeau.getNbMouton() * Math.random() / 4);
 			if (nbMort == 0) {
-				nbMort ++;
+				nbMort++;
 			}
-			System.out.println("Vos moutons ont faim !\n"
-					+ nbMort + " mouton(s) sont morts de faim.");
+			System.out.println("Vos moutons ont faim !\n" + nbMort + " mouton(s) sont morts de faim.");
 		}
-		if(troupeau.isEstDansGrange() || herbe < 1) {
-			troupeau.setJaugeFaim(troupeau.getJaugeFaim()-2);
-		}else if (troupeau.getJaugeFaim()<10) {
-			 
-			troupeau.setJaugeFaim(troupeau.getJaugeFaim()+1);
+		if (troupeau.isEstDansGrange() || herbe < 1) {
+			troupeau.setJaugeFaim(troupeau.getJaugeFaim() - 2);
+		} else if (troupeau.getJaugeFaim() < 10) {
+
+			troupeau.setJaugeFaim(troupeau.getJaugeFaim() + 1);
 			decrementHerbe();
 		}
-		
+
 	}
-	
+
 	public void decrementHerbe() {
-		this.herbe --;
+		this.herbe--;
 	}
-	
+
 	public void resetHerbe() {
 		this.herbe = 10;
 	}
+
 	/**
 	 * @return the herbe
 	 */
 	public int getHerbe() {
 		return herbe;
 	}
+
 	/**
-	 * @param herbe the herbe to set
+	 * @param herbe
+	 *            the herbe to set
 	 */
 	public void setHerbe(int herbe) {
 		this.herbe = herbe;
 	}
-	
+
 	public String showHerbe() {
 		String res = "";
 		for (int i = 0; i < 10; i++) {
-			if (herbe>i) {
-				res+="#";
-			}else {
-				res+=".";
+			if (herbe > i) {
+				res += "#";
+			} else {
+				res += ".";
 			}
 		}
 		return res;
 	}
+
 	/**
 	 * @return the gagne
 	 */
@@ -161,7 +162,4 @@ public class Partie {
 		return gagne;
 	}
 
-	
-	
-	
 }
