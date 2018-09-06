@@ -66,7 +66,6 @@ public class Jeu {
 			p.incrementeCompteur();
 			p.decrementHerbe();
 			p.variationFaimMouton();
-			p.decrementHerbe();
 			if(p.getHerbe()<1) {
 				System.out.println("il n'y a plus d'herbe dans la prairie... Voulez-vous bouger vos moutons ? (-2 pt)\n"+"1- Oui\n"+"2- Non\n");
 				Scanner sc = new Scanner(System.in);
