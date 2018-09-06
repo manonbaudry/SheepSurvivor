@@ -2,7 +2,7 @@ package Game;
 
 import java.util.Scanner;
 
-public class Tempete extends ConsequenceAlea {
+public class Tempete implements Alea  {
 
 	@Override
 	public void effectuerAlea(TroupeauMouton moutons, Berger b) {
@@ -34,14 +34,6 @@ public class Tempete extends ConsequenceAlea {
 		} else {
 			System.out.println("Vous êtes protégés, vos moutons sont déjà dans la grange");
 		}
-	}
-
-	public static void main(String[] args) {
-		TroupeauMouton moutons = new TroupeauMouton(50);
-		moutons.setEstDansGrange(true);
-		Berger b = new Berger("yolo");
-		ConsequenceAlea ca = new Tempete();
-		ca.effectuerAlea(moutons, b);
 	}
 
 }

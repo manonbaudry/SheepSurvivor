@@ -1,6 +1,6 @@
 package Game;
 
-public class Naissance extends ConsequenceAlea {
+public class Naissance implements Alea  {
 
 	@Override
 	public void effectuerAlea(TroupeauMouton moutons, Berger berger) {

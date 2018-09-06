@@ -2,7 +2,7 @@ package Game;
 
 import java.util.Scanner;
 
-public class Tombola extends ConsequenceAlea{
+public class Tombola implements Alea {
 
 	
 	private String mouton2() {
