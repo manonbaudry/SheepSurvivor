@@ -95,7 +95,7 @@ public class Tombola implements Alea {
 			mouton = mouton4();
 		}
 		
-		System.out.println("Combien pensez-vous qu'il pèse ? (en kg)");
+		System.out.println("Combien pèse-t-il ? (en kg)");
 		Scanner sc = new Scanner(System.in);
 		
 		String res = "";

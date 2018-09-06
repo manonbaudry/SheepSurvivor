@@ -15,7 +15,7 @@ public class Loups implements Alea {
 				res = sc.nextLine();
 			}
 			if (res.equals("2") || b.getJaugeFatigue() < 3) {
-				System.out.println("Voulez-vous pourchassez les loups pour espérer sauvez vos moutons ?\n" + "1- Oui\n"
+				System.out.println("Voulez-vous pourchasser les loups pour espérer sauver vos moutons ?\n" + "1- Oui\n"
 						+ "2- Non\n");
 				String res2 = sc.nextLine();
 				while (!res2.matches("[1-2]")) {
