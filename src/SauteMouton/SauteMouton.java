@@ -1,6 +1,11 @@
 package SauteMouton;
 
-public class SauteMouton {
+import Game.Alea;
+import Game.Berger;
+import Game.Texts;
+import Game.TroupeauMouton;
+
+public class SauteMouton implements Alea{
 
 	private JeuMouton jeu;
 
@@ -49,10 +54,22 @@ public class SauteMouton {
 			System.out.println("T'as perdu");
 		}
 	}
-
-	public static void main(String[] args) {
-		SauteMouton sm = new SauteMouton();
-		sm.run();
+	
+	public boolean getGagnant() {
+		return jeu.gagnant();
 	}
 
+	@Override
+	public void effectuerAlea(TroupeauMouton moutons, Berger berger) {
+		System.out.println(Texts.getAleaSauteMouton());
+		SauteMouton sm = new SauteMouton();
+		sm.run();
+		if (sm.getGagnant()) {
+			System.out.println("Bravo aucun mouton ne s'est echapper");
+		}else {
+			int nbMoutonEchappe = (int)(moutons.getNbMouton()*0.2);
+			System.out.println("Mince "+nbMoutonEchappe+" mouton(s) se sont echapper");
+		}
+	}
+	
 }

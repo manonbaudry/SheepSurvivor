@@ -66,6 +66,10 @@ public class Texts {
 		return "Tombola au village : tentez de gagner un mouton !\n";
 	}
 	
+	public static String getAleaSauteMouton(){
+		return "Des moutons veulent s'echapper arriverai vous à les echanger de cotes";
+	}
+	
 	public static String getBergerFatigue() {
 		return ("Le berger est trop fatigué pour effectuer cette tâche. Vous devriez prendre un jour de congé !");
 	}

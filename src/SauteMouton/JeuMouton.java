@@ -2,26 +2,26 @@ package SauteMouton;
 
 import java.util.ArrayList;
 
-public class JeuMouton{
+public class JeuMouton {
 
 	protected int idxVide;
 	protected Case[] jeu;
 	private final int SIZE;
-	
+
 	public JeuMouton(int sIZE) {
-		if (sIZE > 0 && sIZE%2 == 1) {
+		if (sIZE > 0 && sIZE % 2 == 1) {
 			SIZE = sIZE;
-		}else {
+		} else {
 			SIZE = 9;
 		}
 		jeu = new Case[SIZE];
-		idxVide = SIZE/2;
+		idxVide = SIZE / 2;
 		for (int i = 0; i < jeu.length; i++) {
 			if (i < idxVide) {
 				jeu[i] = Case.DROIT;
-			}else if (i == idxVide) {
+			} else if (i == idxVide) {
 				jeu[i] = Case.VIDE;
-			}else {
+			} else {
 				jeu[i] = Case.GAUCHE;
 			}
 		}
@@ -40,40 +40,58 @@ public class JeuMouton{
 	public void executer(int coup) {
 		idxVide = coup;
 		if (jeu[coup] == Case.DROIT) {
-			if (jeu[coup+1] == Case.VIDE) {
-				jeu[coup+1] = Case.DROIT;
+			if (jeu[coup + 1] == Case.VIDE) {
+				jeu[coup + 1] = Case.DROIT;
 				jeu[coup] = Case.VIDE;
-			}else {
-				jeu[coup+2] = Case.DROIT;
+			} else {
+				jeu[coup + 2] = Case.DROIT;
 				jeu[coup] = Case.VIDE;
 			}
-		}else {
-			if (jeu[coup-1] == Case.VIDE) {
-				jeu[coup-1] = Case.GAUCHE;
+		} else {
+			if (jeu[coup - 1] == Case.VIDE) {
+				jeu[coup - 1] = Case.GAUCHE;
 				jeu[coup] = Case.VIDE;
-			}else {
-				jeu[coup-2] = Case.GAUCHE;
+			} else {
+				jeu[coup - 2] = Case.GAUCHE;
 				jeu[coup] = Case.VIDE;
 			}
 		}
 	}
-	
+
 	private boolean ok(int coup) {
 		if (jeu[coup] == Case.VIDE) {
 			return false;
-		}else if (jeu[coup] == Case.DROIT && jeu[coup+1] != Case.VIDE && jeu[coup+2] != Case.VIDE) {
+		}
+		if (coup == jeu.length-1) {
 			return false;
-		}else if (jeu[coup] == Case.GAUCHE && jeu[coup-1] != Case.VIDE && jeu[coup-2] != Case.VIDE) {
+		}
+		if (coup == jeu.length-2) {
+			if (jeu[coup] == Case.DROIT && jeu[coup + 1] != Case.VIDE) {
+				return false;
+			}	
+		}
+		if (coup == 0) {
+			return false;
+		}
+		if (coup == 1) {
+			if (jeu[coup] == Case.GAUCHE && jeu[coup - 1] != Case.VIDE) {
+				return false;
+			}	
+		}
+		if (jeu[coup] == Case.DROIT && jeu[coup + 1] != Case.VIDE && jeu[coup + 2] != Case.VIDE) {
+			return false;
+		}
+		if (jeu[coup] == Case.GAUCHE && jeu[coup - 1] != Case.VIDE && jeu[coup - 2] != Case.VIDE) {
 			return false;
 		}
 		return true;
 	}
 
 	public boolean gagnant() {
-		if (idxVide !=  SIZE/2) {
+		if (idxVide != SIZE / 2) {
 			return false;
 		}
-		for (int i = 0; i < jeu.length/2; i++) {
+		for (int i = 0; i < jeu.length / 2; i++) {
 			if (jeu[i] != Case.GAUCHE) {
 				return false;
 			}
@@ -91,5 +109,5 @@ public class JeuMouton{
 	public boolean perdant() {
 		return coupsPossibles().isEmpty();
 	}
-	
+
 }
