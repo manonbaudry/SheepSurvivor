@@ -39,7 +39,7 @@ public class Texts {
 	}
 	
 	public static String getRegles() {
-		return 	  "1- Vous devez reussir a avoir le plus grand nombre de mouton\n"
+		return 	  "1- Vous devez finir avec le plus grand nombre de moutons\n"
 				+ "2- Le nombre de jours est de 20\n"
 				+ "3- Si vous n'avez plus de mouton c'est la fin de la partie\n"
 				+ "4- Si votre jauge de santé est au minimum, vous ne pourrez plus faire d'action\n";
