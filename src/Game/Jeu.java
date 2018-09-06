@@ -80,6 +80,8 @@ public class Jeu {
 						p.getB().setJaugeFatigue(p.getB().getJaugeFatigue() - 2);
 						p.getTroupeau().setNbMouton(p.getTroupeau().getNbMouton() - p.getTroupeau().getNbMalade());
 						p.getTroupeau().setNbMalade(0);
+					}else {
+						System.out.println(Texts.getBergerFatigue());
 					}
 				} else {
 					System.out.println(Texts.getBergerFatigue());
@@ -104,6 +106,9 @@ public class Jeu {
 					p.getB().setJaugeFatigue(p.getB().getJaugeFatigue() - 2);
 
 				} else {
+					if (p.getB().getJaugeFatigue() < 2) {
+						System.out.println(Texts.getBergerFatigue());
+					}
 					System.out.println("Vos moutons n'ont plus à manger");
 				}
 			}
