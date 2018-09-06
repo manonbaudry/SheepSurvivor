@@ -42,6 +42,7 @@ public class Tempete extends ConsequenceAlea {
 
 	public static void main(String[] args) {
 		TroupeauMouton moutons = new TroupeauMouton(50);
+		moutons.setEstDansGrange(true);
 		Berger b = new Berger("yolo");
 		ConsequenceAlea ca = new Tempete();
 		ca.effectuerAlea(moutons, b);

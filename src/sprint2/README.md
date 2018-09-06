@@ -1,9 +1,9 @@
-# Rétrospective de sprint 1
+# Rétrospective de sprint 2
 
-Nom du scrum master du sprint : Pottier Florian
+Nom du scrum master du sprint : Baudry Manon
 
 ## Ce que nous avons fait durant ce sprint
-	- Création et affichage de la jauge de faim dees moutons
+	- Création et affichage de la jauge de faim des moutons
 	- Mise en place d'un compteur de tour de jeu + affichage du tour de jeu
 	- affichage  de la jauge d'énergie du berger et variation de sa jauge en fonction des déicisions du joueur
 	- création des aléas "attaque de loups", "maladie", "Naissance d'un mouton", "tempête", "tombola" (pour gagner un mouton) 

@@ -50,6 +50,7 @@ public class Loups extends ConsequenceAlea {
 
 	public static void main(String[] args) {
 		TroupeauMouton moutons = new TroupeauMouton(50);
+		moutons.setEstDansGrange(true);
 		Berger b = new Berger("");
 		ConsequenceAlea ca = new Loups();
 		ca.effectuerAlea(moutons, b);
