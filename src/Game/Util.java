@@ -1,4 +1,4 @@
-package sprint3;
+package Game;
 
 public class Util {
 

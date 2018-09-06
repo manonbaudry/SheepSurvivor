@@ -1,4 +1,4 @@
-package sprint4;
+package Game;
 
 public class SauteMouton {
 

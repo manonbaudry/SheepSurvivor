@@ -1,11 +1,11 @@
-package sprint1.test;
+package Game.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-import sprint1.TroupeauMouton;
+import Game.TroupeauMouton;
 
 class TestTroupeau {
 

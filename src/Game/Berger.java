@@ -2,7 +2,7 @@
  * Groupe 9
  * 05/09/2018
  */
-package sprint1;
+package Game;
 
 public class Berger {
 	private String nom;

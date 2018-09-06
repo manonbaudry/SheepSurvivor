@@ -2,17 +2,9 @@
  * Groupe 9
  * 05/09/2018
  */
-package sprint2;
-import sprint3.Util;
-
+package Game;
 import java.awt.event.MouseAdapter;
 import java.util.Scanner;
-
-import sprint1.Alea;
-import sprint1.Berger;
-import sprint1.Partie;
-import sprint1.Texts;
-import sprint1.TroupeauMouton;
 
 /**
  * @author baudrym

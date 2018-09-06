@@ -1,8 +1,4 @@
-package sprint2;
-
-import sprint1.Alea;
-import sprint1.Berger;
-import sprint1.TroupeauMouton;
+package Game;
 
 public abstract class ConsequenceAlea {
 	

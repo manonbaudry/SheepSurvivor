@@ -2,7 +2,7 @@
  * Groupe 9
  * 05/09/2018
  */
-package sprint1;
+package Game;
 
 import java.util.Scanner;
 

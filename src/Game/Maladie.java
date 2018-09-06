@@ -1,11 +1,7 @@
-package sprint2;
+package Game;
 
 import java.util.Random;
 import java.util.Scanner;
-
-import sprint1.Berger;
-import sprint1.Texts;
-import sprint1.TroupeauMouton;
 
 public class Maladie extends ConsequenceAlea {
 
