@@ -18,7 +18,7 @@ public class Tombola extends ConsequenceAlea{
 		"    (|   `;      ,   |\n" + 
 		"      \\   ;.----/  ,/\n" + 
 		"       ) // /   | |\\ \\\n" + 
-		"   jgs \\ \\\\`\\   | |/ /\n" + 
+		"       \\ \\\\`\\   | |/ /\n" + 
 		"        \\ \\\\ \\  | |\\/\n" + 
 		"         `\" `\"  `\"`\n" + 
 		"\n";
@@ -32,7 +32,7 @@ public class Tombola extends ConsequenceAlea{
 				"                          `.  )._\\   (\\\n" + 
 				"                            |//   `-,//\n" + 
 				"                            ]||    //\"\n" + 
-				"                     hjw    \"\"    \"\"\n" + 
+				"                            \"\"    \"\"\n" + 
 				"\n";
 				
 	}
@@ -66,7 +66,7 @@ public class Tombola extends ConsequenceAlea{
 				"       [ j J            / / L ;\n" + 
 				"       | |Y \\          /_J  | |\n" + 
 				"       L_J/_)         /_)   L_J\n" + 
-				"      /_)               sk /_)\n" + 
+				"      /_)                   /_)\n" + 
 				"";
 	}
 	@Override

@@ -18,9 +18,8 @@ public class Tempete extends ConsequenceAlea {
 		while (!res.matches("[1-2]")) {
 			res = sc.nextLine();
 		}
-		//sc.close();
 		if (res.equals("2") || b.getJaugeFatigue() < 5) {
-			int nbMoutonMort = moutons.getNbMouton() / 33;
+			int nbMoutonMort = (int)(moutons.getNbMouton()*(Math.random()/3));
 			System.out.println("Mince, vous n'avez pas réussi à sauver tous les moutons !\n" + nbMoutonMort
 					+ " mouton(s) est/sont mort(s) dans la tempête...");
 			moutons.setNbMouton(moutons.getNbMouton() - nbMoutonMort);
@@ -32,6 +31,13 @@ public class Tempete extends ConsequenceAlea {
 			System.out.println("Votre jauge de fatigue passe a "+fatigue);
 			b.setJaugeFatigue(fatigue);
 		}
+	}
+	
+	public static void main(String[] args) {
+		TroupeauMouton moutons = new TroupeauMouton(50);
+		Berger b = new Berger("yolo");
+		ConsequenceAlea ca = new Tempete();
+		ca.effectuerAlea(moutons, b);
 	}
 	
 }

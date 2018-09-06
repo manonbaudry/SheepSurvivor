@@ -25,7 +25,7 @@ public class Loups extends ConsequenceAlea {
 				res2 = sc.nextLine();
 			}
 			if (res2.equals("2") || b.getJaugeFatigue() < 4) {
-				int nbMoutonMort = moutons.getNbMouton() / 20;
+				int nbMoutonMort = (int)(moutons.getNbMouton()*(Math.random()/4));
 				System.out.println("Les loups ont réussi à dévorer " + nbMoutonMort + " délicieu(x) mouton(s)...");
 				moutons.setNbMouton(moutons.getNbMouton() - nbMoutonMort);
 				if (moutons.getNbMalade() > moutons.getNbMouton()) {
@@ -42,7 +42,6 @@ public class Loups extends ConsequenceAlea {
 			b.setJaugeFatigue(fatigue);
 		}
 
-	//	sc.close();
 	}
 	
 	public static void main(String[] args) {
