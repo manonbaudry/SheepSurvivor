@@ -40,11 +40,7 @@ public class Jeu {
 					p.getTroupeau().setEstDansGrange(false);
 				}
 			}
-			if(p.getB().getJaugeFatigue()==0) {
-				MonAlea alea = new MonAlea();
-				alea.tirage(p.getTroupeau(), p.getB());
-				p.getB().setJaugeFatigue(10);
-			}
+
 			if (p.getTroupeau().getNbMalade() >  0) {
 				p.getTroupeau().setNbMalade(p.getTroupeau().getNbMalade() + (int)(Math.random()*(p.getTroupeau().getNbMouton()-p.getTroupeau().getNbMalade()) / 3));
 				System.out.println("La maladie s'est propagée ! Il y a désormais " + p.getTroupeau().getNbMalade() + " moutons malades.");
@@ -87,6 +83,11 @@ public class Jeu {
 			}
 			p.finPartie();
 			Util.delay();
+		}
+		if(p.isGagne()) {
+			System.out.println("Bravo tu as sauvé tes moutons !");
+		}else {
+			System.out.println("Tu as perdu, tous tes moutons sont morts...");
 		}
 	}
 

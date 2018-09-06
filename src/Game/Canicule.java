@@ -32,6 +32,7 @@ public class Canicule implements Alea {
 					rdm ++;
 				}
 				System.out.println("La canicule a tué " + rdm + " mouton(s) !");
+				moutons.setNbMouton(moutons.getNbMouton() - rdm);
 			}
 		}
 

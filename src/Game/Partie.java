@@ -12,6 +12,7 @@ public class Partie {
 	private int compteur;
 	private boolean finPartie;
 	private int herbe;
+	private boolean gagne; 
 	/**
 	 * @param b
 	 * @param troupeau
@@ -22,6 +23,7 @@ public class Partie {
 		this.compteur = 0;
 		this.finPartie = false;
 		this.herbe = 10;
+		this.gagne = false;
 	}
 	/**
 	 * @return the compteur
@@ -56,9 +58,8 @@ public class Partie {
 	}
 	
 	public void afichageDonnees() {
-		System.out.println(b.getNom() + 
+		System.out.println("\nTour n°" + compteur +
 				"\nEnergie du berger :" + b.showJaugeFatigue()+
-				"\nTour n°" + compteur + 
 				"\nSatiété des moutons :" + troupeau.showJaugeFaim() +
 				"\n" +troupeau.toString());
 		if(troupeau.isEstDansGrange()) {
@@ -91,11 +92,18 @@ public class Partie {
 		this.troupeau = troupeau;
 	}
 	
+	
+	
 	public void finPartie() {
-		if(compteur > 20) {
+		if(compteur > 20){
 			finPartie = true;
+			gagne = true;
+		}else if(troupeau.getNbMouton()<1) {
+			finPartie = true;
+			gagne = false;
 		}
 	}
+	
 	public void variationFaimMouton() {
 		if(troupeau.isEstDansGrange() || herbe < 1) {
 			troupeau.setJaugeFaim(troupeau.getJaugeFaim()-2);
@@ -137,4 +145,14 @@ public class Partie {
 		}
 		return res;
 	}
+	/**
+	 * @return the gagne
+	 */
+	public boolean isGagne() {
+		return gagne;
+	}
+
+	
+	
+	
 }
