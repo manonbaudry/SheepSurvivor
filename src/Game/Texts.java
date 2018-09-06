@@ -70,6 +70,10 @@ public class Texts {
 		return "Des moutons veulent s'echapper arriverai vous à les echanger de cotes";
 	}
 	
+	public static String getAleaCadeau(int nbCadeau){
+		return "Un de vos voisin vous donne gracieusement "+nbCadeau+"mouton(s)";
+	}
+	
 	public static String getBergerFatigue() {
 		return ("Le berger est trop fatigué pour effectuer cette tâche. Vous devriez prendre un jour de congé !");
 	}

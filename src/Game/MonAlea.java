@@ -15,6 +15,8 @@ public class MonAlea {
 		double tirage = Math.random();
 		if (tirage < 0.1) {
 			new Naissance().effectuerAlea(t, b);
+		}else if (tirage < 0.4) {
+			
 		}else if (tirage < 0.45) {
 			new Tempete().effectuerAlea(t, b);
 		}else if (tirage < 0.55) {

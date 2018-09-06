@@ -69,6 +69,7 @@ public class SauteMouton implements Alea{
 		}else {
 			int nbMoutonEchappe = (int)(moutons.getNbMouton()*0.2);
 			System.out.println("Mince "+nbMoutonEchappe+" mouton(s) se sont echapper");
+			moutons.setNbMouton(moutons.getNbMouton()-nbMoutonEchappe);
 		}
 	}
 	
