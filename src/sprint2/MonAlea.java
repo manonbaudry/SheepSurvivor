@@ -24,7 +24,7 @@ public class MonAlea {
 		} else if (tirage < 0.7) { 
 			new Tombola().effectuerAlea(t, b);
 		}else if (tirage < 0.8) {
-			//new Maladie().effectuerAlea(t, b); 
+			new Maladie().effectuerAlea(t, b); 
 		}else {
 			System.out.println("Il ne s'est rien passé aujourd'hui");
 			b.resetJaugeFatigue();
