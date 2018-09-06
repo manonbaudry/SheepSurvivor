@@ -17,6 +17,9 @@ public class Tempete implements Alea  {
 			}
 			if (res.equals("2") || b.getJaugeFatigue() < 5) {
 				int nbMoutonMort = (int) (moutons.getNbMouton() * (Math.random() / 3));
+				if (nbMoutonMort == 0) {
+					nbMoutonMort ++;
+				}
 				System.out.println("Mince, vous n'avez pas réussi à sauver tous les moutons !\n" + nbMoutonMort
 						+ " mouton(s) est/sont mort(s) dans la tempête...");
 				moutons.setNbMouton(moutons.getNbMouton() - nbMoutonMort);

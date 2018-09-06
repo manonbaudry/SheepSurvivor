@@ -73,4 +73,8 @@ public class Texts {
 	public static String getBergerFatigue() {
 		return ("Le berger est trop fatigué pour effectuer cette tâche. Vous devriez prendre un jour de congé !");
 	}
+	
+	public static String getAleaCannicule() {
+		return ("Cannicule en approche. Vos moutons vont mourir de chaud si vous ne les tondez pas !");
+	}
 }
