@@ -115,7 +115,7 @@ public class Partie {
 		} else if (troupeau.getJaugeFaim() < 10) {
 
 			troupeau.setJaugeFaim(troupeau.getJaugeFaim() + 1);
-			decrementHerbe();
+		
 		}
 
 	}
