@@ -42,9 +42,5 @@ public class Canicule implements Alea {
 
 
 	}
-	
-	public static void main (String[] args) {
-		
-	}
 
 }

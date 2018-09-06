@@ -101,12 +101,5 @@ public class TroupeauMouton {
 		}
 		return res;
 	}
-
-	public static void main(String[] args) {
-		TroupeauMouton tm = new TroupeauMouton(50);
-		System.out.println(tm);
-		tm.setNbMalade(20);
-		System.out.println(tm);
-	}
 	
 }
